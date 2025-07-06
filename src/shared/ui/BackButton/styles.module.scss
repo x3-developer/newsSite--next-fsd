@@ -1,0 +1,12 @@
+@use 'src/app/styles/mixins' as *;
+
+.button {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+
+  .icon {
+    width: 27px;
+    height: 14px;
+  }
+}

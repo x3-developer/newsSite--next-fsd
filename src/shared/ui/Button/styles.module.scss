@@ -1,0 +1,31 @@
+@use 'src/app/styles/mixins' as *;
+@use 'src/app/styles/variables' as *;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 48px;
+  border-radius: 100px;
+
+  &.green {
+    border: 1px solid $greenColor;
+    color: $greenColor;
+
+    &.fill {
+      background-color: $greenColor;
+      color: $whiteColor;
+    }
+  }
+
+  &.golden {
+    border: 1px solid $goldenColor;
+    color: $goldenColor;
+
+    &.fill {
+      background-color: $goldenColor;
+      color: $whiteColor;
+    }
+  }
+}

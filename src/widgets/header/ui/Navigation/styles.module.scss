@@ -1,0 +1,60 @@
+@use 'src/app/styles/mixins' as *;
+@use 'src/app/styles/variables' as *;
+
+.burger {
+  @include flex-center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+
+  @include media('xl') {
+    display: none;
+  }
+}
+
+.navbar {
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 16px;
+  background-color: $whiteColor;
+  padding: 21px 24px 21px 40px;
+  box-shadow: 0 20px 18px rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+
+  @include media('md') {
+    right: 44px;
+  }
+
+  &.opened {
+    display: block;
+  }
+
+  @include media('xl') {
+    position: initial;
+    display: block;
+    margin-left: 23px;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .navbarList {
+    display: flex;
+    flex-direction: column;
+
+    @include media('xl') {
+      flex-direction: row;
+      align-items: center;
+      column-gap: 30px;
+      row-gap: 12px;
+    }
+  }
+
+  .navbarLink {
+    cursor: pointer;
+    &.active {
+      color: $blackColor;
+    }
+  }
+}

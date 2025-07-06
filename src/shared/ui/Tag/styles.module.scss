@@ -1,0 +1,20 @@
+@use 'src/app/styles/mixins' as *;
+@use 'src/app/styles/variables' as *;
+
+.tag {
+  @include flex-center;
+  font-size: 12px;
+  line-height: 18px;
+  color: $whiteColor;
+  height: 24px;
+  padding: 0 12px;
+  border-radius: 12px;
+
+  &.blue {
+    background-color: $blueColor;
+  }
+
+  &.gray {
+    background-color: $darkGrayColor;
+  }
+}

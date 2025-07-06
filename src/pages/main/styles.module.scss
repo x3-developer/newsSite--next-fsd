@@ -1,0 +1,39 @@
+@use 'src/app/styles/mixins' as *;
+
+.news {
+  padding: 32px 0 110px;
+
+  .title {
+    font-size: 30px;
+
+    @include media('md') {
+      font-size: 38px;
+      line-height: 36px;
+    }
+
+    @include media('xl') {
+      font-size: 48px;
+    }
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 79px;
+
+    @include media('md') {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 40px;
+    }
+
+    @include media('xl') {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 60px;
+    }
+
+    @include media('2xl') {
+      row-gap: 60px;
+    }
+  }
+}

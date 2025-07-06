@@ -1,0 +1,20 @@
+@use 'src/app/styles/mixins' as *;
+
+.container {
+  width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+
+  @include media('md') {
+    padding: 0 44px;
+  }
+
+  @include media('xl') {
+    padding: 0;
+    max-width: 1204px;
+  }
+
+  @include media('2xl') {
+    max-width: 1459px;
+  }
+}

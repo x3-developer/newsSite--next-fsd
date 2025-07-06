@@ -1,0 +1,25 @@
+@use 'src/app/styles/mixins' as *;
+@use 'src/app/styles/variables' as *;
+
+.listContainer {
+  box-shadow: 0 20px 18px rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+  padding: 16px 15px;
+}
+
+.listTitle {
+  font-size: 28px;
+  line-height: 28px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid $lightGrayColor;
+}
+
+.loadMore {
+  margin-top: 20px;
+}

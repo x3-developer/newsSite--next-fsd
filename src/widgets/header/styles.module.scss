@@ -1,0 +1,70 @@
+@use 'src/app/styles/mixins' as *;
+@use 'src/app/styles/variables' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  height: 80px;
+  background-color: $whiteColor;
+  border-bottom: 1px solid $lightGrayColor;
+  z-index: 50;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+
+    @include media('xl') {
+      justify-content: center;
+    }
+  }
+
+  .logo {
+    width: 184px;
+    height: 51px;
+
+    .logoImage {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .burger {
+    @include flex-center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+
+    @include media('xl') {
+      display: none;
+    }
+  }
+
+  .navbar {
+    display: none;
+    margin-left: 23px;
+
+    @include media('xl') {
+      display: block;
+    }
+
+    .navbarList {
+      display: flex;
+      align-items: center;
+      column-gap: 30px;
+      row-gap: 12px;
+    }
+
+    .navbarLink {
+      &.active {
+        color: $blackColor;
+      }
+    }
+  }
+}

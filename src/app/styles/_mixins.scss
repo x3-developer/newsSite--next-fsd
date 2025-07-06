@@ -1,0 +1,26 @@
+@use './variables' as *;
+@use 'sass:map';
+
+@mixin media($breakpoint, $type: min) {
+  $size: map.get($breakpoints, $breakpoint);
+
+  @if $size {
+    @if $type == min {
+      @media (min-width: $size) {
+        @content;
+      }
+    } @else if $type == max {
+      @media (max-width: $size) {
+        @content;
+      }
+    }
+  } @else {
+    @warn "Нет такого брейкпоинта: `#{$breakpoint}`.";
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,15 @@
+@use 'src/app/styles/mixins' as *;
+@use 'src/app/styles/variables' as *;
+
+.views {
+  @include flex-center;
+  column-gap: 3px;
+  height: 24px;
+  font-size: 12px;
+  line-height: 18px;
+  color: $grayColor;
+  background-color: $whiteColor;
+  padding: 0 8px 0 4px;
+  border: 1px solid $lightGrayColor;
+  border-radius: 12px;
+}

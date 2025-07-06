@@ -1,0 +1,62 @@
+@use './variables' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+body {
+  font-size: 15px;
+  line-height: 24px;
+  color: $lightBlackBlack;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+
+  @media (max-width: 1371px) {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: $lightGrayColor;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $lightBlackBlack;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $lightGrayColor;
+}
