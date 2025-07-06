@@ -1,22 +1,52 @@
-# Sport News Stub
+# Sport News Site
 
-## Setup
+Проект: новостной сайт о спорте на Next.js с поддержкой мультиязычности (i18n).
 
-Dependencies:
+## Стек технологий
+- Next.js (App Router)
+- React
+- TypeScript
+- SCSS-модули
+- Jotai для управления состоянием
+- Локализация через JSON-файлы
 
-- Node.js 22.15.0
-- yarn
+## Структура проекта
+- `app/` — корневой роутинг Next.js, поддержка локалей, страницы и лэйауты
+- `src/` — основная бизнес-логика, компоненты, стили, утилиты
+  - `entities/` — бизнес-сущности (например, новости)
+  - `shared/` — переиспользуемые компоненты, утилиты, константы
+  - `widgets/` — крупные блоки интерфейса (например, header)
+- `public/` — статические файлы (изображения)
+- `messages/` — файлы локализации
 
-### Install dependencies
+## Быстрый старт
 
+### Установка зависимостей
 ```bash
-# yarn
 yarn install --save-lockfile
 ```
 
-### Development
-
+### Запуск в режиме разработки
 ```bash
-# Start the development server
 yarn dev
 ```
+
+### Сборка и запуск production
+```bash
+yarn build
+yarn start
+```
+
+## Локализация
+- Локализация реализована через папки `[locale]` и JSON-файлы в `messages/`
+- По умолчанию поддерживается русский язык (`ru`)
+
+## Структура страниц
+- Главная: `/[locale]/(site)`
+- Новости: `/[locale]/(site)/news`
+- Новость: `/[locale]/(site)/news/[id]`
+
+## Контакты
+Поддержка: x3.na.tri@gmail.com
+
+Ссылка на репозиторий: [https://github.com/x3-developer/newsSite--next-fsd](https://github.com/x3-developer/newsSite--next-fsd)
